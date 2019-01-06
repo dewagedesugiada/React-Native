@@ -39,7 +39,7 @@ export default class DasboardContainer extends Component{
         console.log('Dashboard container render  dipanggil');
         return(
             <View style = {styles.Dashboard } >
-                <Button title={'POST'} onPress={this.postCustomer}/>
+
                 <TopNavBarComponent navigation={this.props.navigation} data={this.getListCustomers}/>
                 <ListViewComponent customers={this.state.customer}  />
             </View>

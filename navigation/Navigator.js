@@ -3,6 +3,7 @@ import { View , Text} from 'react-native';
 import { createBottomTabNavigator, createAppContainer, createStackNavigator } from 'react-navigation';
 import DasboardContainer from "../container/DasboardContainer";
 import ContentComponent from "../component/ContentComponent";
+import ListContainer from "../container/ListContainer";
 
 class HomeScreen extends React.Component {
     constructor(props){
@@ -27,9 +28,21 @@ class UserScreen extends React.Component {
     }
 }
 
+
+class ListScreen extends React.Component {
+    render() {
+        return (
+            <View style={{ flex: 1 }}>
+                <ListContainer/>
+            </View>
+        );
+    }
+}
+
 const TabNavigator = createBottomTabNavigator({
     Home: HomeScreen,
     User: UserScreen,
+    List: ListScreen,
 });
 
 export default createAppContainer(TabNavigator);

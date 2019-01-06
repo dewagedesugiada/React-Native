@@ -3,6 +3,7 @@ import {View, StyleSheet, Text} from 'react-native';
 import FormContainer from "../container/FormContainer";
 import ListViewComponent from "./ListViewComponent";
 import TopNavBarComponent from "../container/DasboardContainer";
+import FormCustomer from "./customer/FormCustomer";
 
 export default class ContentComponent extends  Component {
     constructor(props){
@@ -12,7 +13,7 @@ export default class ContentComponent extends  Component {
         return (
             <View style={styles.Content}>
 
-                <FormContainer/>
+                <FormCustomer/>
 
             </View>
         )

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Text, StyleSheet, ScrollView, FlatList, ActivityIndicator,Button} from 'react-native';
+import {View, Text, StyleSheet, ScrollView, FlatList, ActivityIndicator,Button, TouchableOpacity} from 'react-native';
 import {getCustomer} from "../service/CustomerService";
 
 
@@ -8,7 +8,6 @@ export default class ListViewComponent extends  Component {
         super(props)
 
     }
-
 
     render() {
 
@@ -22,6 +21,13 @@ export default class ListViewComponent extends  Component {
                                 <Text>
                                     {data.firstName}
                                 </Text>
+                                {/*<TouchableOpacity*/}
+                                {/*style = {styles.submitButton}*/}
+                                {/*onPress={() => data.customerNumber}*/}
+                                {/*>*/}
+                                {/*<Text style = {styles.submitButtonText}> Delete </Text>*/}
+                                {/*</TouchableOpacity>*/}
+
                             </View>
                         ))
                     }
@@ -47,6 +53,19 @@ const styles = StyleSheet.create({
         borderColor :'#7CE25A',
         backgroundColor : '#2a4944',
         borderWidth: 1
+    },
+    submitButton: {
+        backgroundColor: '#51b8ff',
+        padding: 10,
+        marginTop: 25,
+        marginLeft: 15,
+        marginRight : 15,
+        height: 40,
+        borderRadius: 10
+    },
+    submitButtonText:{
+        color: 'white',
+        textAlign: 'center',
     },
 })
 
